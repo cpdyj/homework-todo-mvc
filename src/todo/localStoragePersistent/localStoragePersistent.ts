@@ -89,15 +89,19 @@ const readTodosFromCategory = async (id: string): Promise<TodoItem[]> => {
 }
 const isTodo = (o: any): o is TodoItem =>
     typeof o === "object" &&
-    typeof o['title'] === "string" &&
-    (o.categoryId === undefined || typeof o['categoryId'] === "string") &&
-    typeof o['createTime'] === "number" &&
-    typeof o['lastModifyTime'] === "number" &&
-    typeof o['status'] === "string"
+    typeof o.title === "string" &&
+    (o.categoryId === undefined || typeof o.categoryId === "string") &&
+    typeof o.createTime === "number" &&
+    typeof o.lastModifyTime === "number" &&
+    typeof o.status === "string"
 const readTodoOrNull = (id: string): TodoItem | null => {
     try {
         const t = JSON.parse(localStorage.getItem(`${TODO_PREFIX}${id}`) || 'null')
-        return isTodo(t) ? t : null
+        if (isTodo(t)) {
+            t.id = id
+            return t
+        }
+        return null
     } catch (e) {
         console.error(e)
         console.warn(`error during read todo[${id}] from localStorage`)
