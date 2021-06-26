@@ -11,6 +11,8 @@ export interface CategoryPersistent {
     update(category: Category): Promise<void>
 
     remove(id: string): Promise<void>
+
+    close(): Promise<void>
 }
 
 export interface TodoPersistent {
@@ -23,5 +25,7 @@ export interface TodoPersistent {
     update(todo: TodoItem): Promise<void>
 
     remove(id: string): Promise<void>
+
+    close(): Promise<void>
 }
 

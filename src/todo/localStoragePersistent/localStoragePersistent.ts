@@ -28,6 +28,8 @@ class LocalCategoryPersistent implements CategoryPersistent {
         throw new Error('todo')
     }
 
+    async close(): Promise<void> {
+    }
 }
 
 class LocalTodoPersistent implements TodoPersistent {
@@ -51,6 +53,9 @@ class LocalTodoPersistent implements TodoPersistent {
 
     update(todo: TodoItem): Promise<void> {
         throw new Error('todo')
+    }
+
+    async close(): Promise<void> {
     }
 }
 
