@@ -16,7 +16,7 @@ class LocalCategoryPersistent implements CategoryPersistent {
         throw new Error('todo')
     }
 
-    put(category: Category): Promise<void> {
+    add(category: Category): Promise<void> {
         throw new Error('todo')
     }
 
@@ -43,7 +43,7 @@ class LocalTodoPersistent implements TodoPersistent {
         throw new Error('todo')
     }
 
-    put(todo: TodoItem): Promise<void> {
+    add(todo: TodoItem): Promise<void> {
         throw new Error('todo')
     }
 
