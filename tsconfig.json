@@ -2,14 +2,18 @@
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
     "noImplicitAny": true,
-    "module": "es6",
-    "target": "es5",
+    "target": "es6",
     "allowJs": true,
     "module": "esnext",
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "jsx": "react-jsx",
+    "strictPropertyInitialization": true,
+    "strictNullChecks": true,
+    "strict": true,
+    "strictFunctionTypes": true
   },
-  "files": [
-    "src/index.ts",
-    "res.d.ts"
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx"
   ]
 }
