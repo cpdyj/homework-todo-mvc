@@ -135,12 +135,12 @@ dist
 # Stores VSCode versions used for testing VSCode extensions
 .vscode-test
 
-# yarn v2
-.yarn/cache
-.yarn/unplugged
-.yarn/build-state.yml
-.yarn/install-state.gz
-.pnp.*
+## yarn v2
+#.yarn/cache
+#.yarn/unplugged
+#.yarn/build-state.yml
+#.yarn/install-state.gz
+#.pnp.*
 
 ### Linux template
 *~
@@ -240,3 +240,12 @@ fabric.properties
 
 # Android studio 3.1+ serialized cache file
 .idea/caches/build_file_checksums.ser
+
+### Yarn 2 Zero-install
+.yarn/*
+!.yarn/cache
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
