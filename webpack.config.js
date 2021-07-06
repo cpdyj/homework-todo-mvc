@@ -2,6 +2,9 @@
 
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const Package = require("./package.json")
+const webpack = require("webpack")
+
 
 const isProduction = process.env.NODE_ENV === "production";
 
@@ -17,6 +20,11 @@ const config = {
     plugins: [
         new HtmlWebpackPlugin({
             template: "index.html",
+        }),
+        new webpack.DefinePlugin({
+            PRODUCTION: JSON.stringify(isProduction),
+            VERSION: JSON.stringify(Package.version),
+            BUILD_TIME: JSON.stringify(new Date().toUTCString())
         }),
     ],
     module: {

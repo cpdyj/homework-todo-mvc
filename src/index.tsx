@@ -14,6 +14,8 @@ import("./87679624_p0.jpg").then(({default: miku}) => {
     }
 });
 
+console.log(`Version: ${VERSION} ${BUILD_TIME} production: ${PRODUCTION}`)
+
 ReactDOM.render(<React.StrictMode>
     <TodoApp/>
 </React.StrictMode>, document.getElementById("app"))
