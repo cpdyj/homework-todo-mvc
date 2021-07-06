@@ -33,9 +33,10 @@ const config = {
         test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
         type: "asset",
       },
-
-      // Add your rules for custom modules here
-      // Learn more about loaders from https://webpack.js.org/loaders/
+      {
+        test: /87679624_p0\.jpg/i,
+        type: "asset/inline"
+      },
     ],
   },
   resolve: {
