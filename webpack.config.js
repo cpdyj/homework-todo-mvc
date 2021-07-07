@@ -26,6 +26,12 @@ const config = {
             VERSION: JSON.stringify(Package.version),
             BUILD_TIME: JSON.stringify(new Date().toUTCString())
         }),
+        new webpack.ids.HashedModuleIdsPlugin({
+            context: __dirname,
+            hashFunction: 'sha256',
+            hashDigest: 'hex',
+            hashDigestLength: 20,
+        }),
     ],
     module: {
         rules: [
