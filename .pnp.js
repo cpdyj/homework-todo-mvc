@@ -37,6 +37,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {
           "packageLocation": "./",
           "packageDependencies": [
+            ["@js-joda/core", "npm:3.2.0"],
+            ["@js-joda/timezone", "virtual:6c96e30dc4e1d28dab07619396ff888db936a8888c0206244e9847814111e788eb5d1eb70b50be94e5c149d1c8379a24b292c2aa8dd13ec0f62d08d5ea019e54#npm:2.5.0"],
             ["@types/react", "npm:17.0.13"],
             ["@types/react-dom", "npm:17.0.8"],
             ["@webpack-cli/generators", "virtual:6c96e30dc4e1d28dab07619396ff888db936a8888c0206244e9847814111e788eb5d1eb70b50be94e5c149d1c8379a24b292c2aa8dd13ec0f62d08d5ea019e54#npm:2.2.0"],
@@ -2169,6 +2171,37 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@hapi/topo", "npm:3.1.6"],
             ["@hapi/hoek", "npm:8.5.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@js-joda/core", [
+        ["npm:3.2.0", {
+          "packageLocation": "./.yarn/cache/@js-joda-core-npm-3.2.0-d2526290e9-c4b106b0fe.zip/node_modules/@js-joda/core/",
+          "packageDependencies": [
+            ["@js-joda/core", "npm:3.2.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@js-joda/timezone", [
+        ["npm:2.5.0", {
+          "packageLocation": "./.yarn/cache/@js-joda-timezone-npm-2.5.0-9bcb54963b-87aab48b40.zip/node_modules/@js-joda/timezone/",
+          "packageDependencies": [
+            ["@js-joda/timezone", "npm:2.5.0"]
+          ],
+          "linkType": "SOFT",
+        }],
+        ["virtual:6c96e30dc4e1d28dab07619396ff888db936a8888c0206244e9847814111e788eb5d1eb70b50be94e5c149d1c8379a24b292c2aa8dd13ec0f62d08d5ea019e54#npm:2.5.0", {
+          "packageLocation": "./.yarn/$$virtual/@js-joda-timezone-virtual-9832c1b410/0/cache/@js-joda-timezone-npm-2.5.0-9bcb54963b-87aab48b40.zip/node_modules/@js-joda/timezone/",
+          "packageDependencies": [
+            ["@js-joda/timezone", "virtual:6c96e30dc4e1d28dab07619396ff888db936a8888c0206244e9847814111e788eb5d1eb70b50be94e5c149d1c8379a24b292c2aa8dd13ec0f62d08d5ea019e54#npm:2.5.0"],
+            ["@js-joda/core", "npm:3.2.0"],
+            ["@types/js-joda__core", null]
+          ],
+          "packagePeers": [
+            "@js-joda/core",
+            "@types/js-joda__core"
           ],
           "linkType": "HARD",
         }]
@@ -7175,6 +7208,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",
           "packageDependencies": [
             ["my-webpack-project", "workspace:."],
+            ["@js-joda/core", "npm:3.2.0"],
+            ["@js-joda/timezone", "virtual:6c96e30dc4e1d28dab07619396ff888db936a8888c0206244e9847814111e788eb5d1eb70b50be94e5c149d1c8379a24b292c2aa8dd13ec0f62d08d5ea019e54#npm:2.5.0"],
             ["@types/react", "npm:17.0.13"],
             ["@types/react-dom", "npm:17.0.8"],
             ["@webpack-cli/generators", "virtual:6c96e30dc4e1d28dab07619396ff888db936a8888c0206244e9847814111e788eb5d1eb70b50be94e5c149d1c8379a24b292c2aa8dd13ec0f62d08d5ea019e54#npm:2.2.0"],

@@ -1262,6 +1262,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@js-joda/core@npm:^3.2.0":
+  version: 3.2.0
+  resolution: "@js-joda/core@npm:3.2.0"
+  checksum: c4b106b0feded1cf42414daed74bed77dae6a4d238d34d7f2e26fa40f83f2ff5ff04d1424405cad57b787cb1a636f809c0f3f6902012415023aa7cdfd9687503
+  languageName: node
+  linkType: hard
+
+"@js-joda/timezone@npm:^2.5.0":
+  version: 2.5.0
+  resolution: "@js-joda/timezone@npm:2.5.0"
+  peerDependencies:
+    "@js-joda/core": ">=1.11.0"
+  checksum: 87aab48b409f568286a22d80c734cd48f0c4c51604bd91a323713c3feac20fc926c273b76d330d95247f9638442289c53708a8577f619ebfdf6ba4fc290ec9cb
+  languageName: node
+  linkType: hard
+
 "@mrmlnc/readdir-enhanced@npm:^2.2.1":
   version: 2.2.1
   resolution: "@mrmlnc/readdir-enhanced@npm:2.2.1"
@@ -5562,6 +5578,8 @@ fsevents@~2.3.2:
   version: 0.0.0-use.local
   resolution: "my-webpack-project@workspace:."
   dependencies:
+    "@js-joda/core": ^3.2.0
+    "@js-joda/timezone": ^2.5.0
     "@types/react": ^17.0.11
     "@types/react-dom": ^17.0.8
     "@webpack-cli/generators": ^2.2.0
