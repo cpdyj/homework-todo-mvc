@@ -38,7 +38,6 @@ const config = {
             {
                 test: /\.(ts|tsx)$/i,
                 loader: "ts-loader",
-                exclude: ["/node_modules/"],
             },
             {
                 test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
@@ -56,10 +55,6 @@ const config = {
 };
 
 module.exports = () => {
-    if (isProduction) {
-        config.mode = "production";
-    } else {
-        config.mode = "development";
-    }
+    config.mode = isProduction ? "production" : "development"
     return config;
 };
