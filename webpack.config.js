@@ -9,7 +9,9 @@ const webpack = require("webpack")
 const isProduction = process.env.NODE_ENV === "production";
 
 const config = {
-    entry: "./src/index.tsx",
+    entry: {
+        main: "./src/index.tsx",
+    },
     output: {
         path: path.resolve(__dirname, "dist"),
         filename: '[name].[contenthash].js',

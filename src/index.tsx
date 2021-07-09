@@ -1,7 +1,3 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import {TodoApp} from "./todo/TodoApp";
-
 const scaleFactor = 0.25
 import("./87679624_p0.jpg").then(({default: miku}) => {
     const img = new Image()
@@ -14,8 +10,8 @@ import("./87679624_p0.jpg").then(({default: miku}) => {
     }
 });
 
-console.log(`Version: ${VERSION} ${BUILD_TIME} production: ${PRODUCTION}`)
+import("./AppEntry").then(({main}) => {
+    main()
+}).catch(reason => console.error('App entry load failed, reason: ', reason))
 
-ReactDOM.render(<React.StrictMode>
-    <TodoApp/>
-</React.StrictMode>, document.getElementById("app"))
+console.log(`Version: ${VERSION} ${BUILD_TIME} production: ${PRODUCTION}`)
